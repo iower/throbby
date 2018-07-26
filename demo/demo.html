@@ -1,0 +1,74 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../throbby.css"></link>
+	</head>
+	<body>
+		<h1>throbby</h1>
+		<p>Don't waste time writing throbber, use the ready one!
+		<h2>How to use</h2>
+		<ol>
+			<li>
+				<p>Add the throbby stylesheet to the head of your page:</p>
+				<pre><xmp><link rel="stylesheet" href="throbby.css"></link></xmp></pre>
+			</li>
+			<li>
+				<p>Create the element with one of the throbby classes:</p>
+				<pre><xmp><div class="throbby-wheel"></div></xmp></pre>
+			</li>
+		</ol>
+		<h2>The list of available throbbers</h2>
+		<div class="examples">
+			<div class="example">
+				<h3>.throbby</h3>
+				<div class="throbby"></div>
+			</div>
+			<div class="example">
+				<h3>.throbby-wheel</h3>
+				<div class="throbby-wheel"></div>
+			</div>
+			<div class="example">
+				<h3>.throbby-rolling</h3>
+				<div class="throbby-rolling"></div>
+			</div>
+		</div>
+		<br><br><br><br>
+		<p>Project page: <a target="_blank" href="https://github.com/iower/throbby">https://github.com/iower/throbby</a></p>
+		<style>
+			xmp {
+				display: inline-block;
+				padding: 15px 30px;
+				border: 1px solid black;
+				background-color: #333;
+				color: #eee;
+				font-weight: bold;
+			}
+			.examples::after {
+				display: table;
+				content: '';
+				clear: both;
+			}
+			.example {
+				float: left;
+				margin: 5px;
+				width: 100px;
+				height: 100px;
+				background-color: #eee;
+				border: 1px solid #bbb;
+				position: relative;
+			}
+			.example h3 {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				margin: 0;
+				margin-bottom: 5px;
+				font-size: 11px;
+				line-height: 11px;
+				text-align: center;
+				font-weight: normal;
+			}
+		</style>
+	</body>
+</html>
