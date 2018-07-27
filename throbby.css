@@ -6,7 +6,7 @@
 	margin-left: -2px;
 	width: 4px;
 	height: 10px;
-	background-color: #000;
+	background-color: #333;
 	animation-name: throbby-2;
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
@@ -21,7 +21,7 @@
 	content: '';
 	width: 4px;
 	height: 10px;
-	background-color: #000;
+	background-color: #333;
 	animation-name: throbby-1;
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
@@ -36,7 +36,7 @@
 	content: '';
 	width: 4px;
 	height: 10px;
-	background-color: #000;
+	background-color: #333;
 	animation-name: throbby-3;
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
@@ -208,5 +208,46 @@
 	}
 	100% {
 		transform: scale(1.5, 1);
+	}
+}
+
+.throbby-eccentric {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: 20px;
+	height: 20px;
+	background-color: #aaa;
+	border-radius: 50%;
+	animation-name: throbby-eccentric;
+	animation-duration: 0.7s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.throbby-eccentric::before {
+	position: absolute;
+	display: table;
+	content: '';
+	left: 0px;
+	top: 50%;
+	margin-top: -4px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #555;
+}
+
+@keyframes throbby-eccentric {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
 	}
 }
