@@ -305,3 +305,42 @@
 		transform: rotate(360deg);
 	}
 }
+
+.throbby-triangle {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 0;
+	height: 0;
+	animation-name: throbby-triangle;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.throbby-triangle::after {
+	display: table;
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0px;
+	height: 0px;
+	margin-left: -10px;
+	margin-top: -11px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 17px solid #999;
+}
+
+@keyframes throbby-triangle {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
