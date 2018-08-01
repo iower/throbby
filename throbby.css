@@ -561,3 +561,65 @@
 		transform: rotate(360deg);
 	}
 }
+
+.throbby-clock {
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #999;
+	border-radius: 50%;
+}
+
+.throbby-clock::before {
+	box-sizing: border-box;
+	display: table;
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -1px;
+	margin-top: -7px;
+	width: 2px;
+	height: 14px;
+	background-color: #999;
+	background-clip: content-box;
+	padding-bottom: 7px;
+	animation-name: throbby-clock;
+	animation-duration: 0.4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.throbby-clock::after {
+	box-sizing: border-box;
+	display: table;
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -1.5px;
+	margin-top: -6px;
+	width: 3px;
+	height: 12px;
+	background-color: #999;
+	background-clip: content-box;
+	padding-bottom: 6px;
+	animation-name: throbby-clock;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes throbby-clock {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
