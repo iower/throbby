@@ -623,3 +623,129 @@
 		transform: rotate(360deg);
 	}
 }
+
+.throbby-star {
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -1px;
+	width: 2px;
+	height: 20px;
+	background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	animation-name: throbby-star-1;
+	animation-duration: 0.6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.throbby-star::before {
+	display: table;
+	content: '';
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -1px;
+	width: 2px;
+	height: 20px;
+	background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	transform: rotate(60deg);
+	animation-name: throbby-star-2;
+	animation-duration: 0.6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.throbby-star::after {
+	display: table;
+	content: '';
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -1px;
+	width: 2px;
+	height: 20px;
+	background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	transform: rotate(120deg);
+	animation-name: throbby-star-3;
+	animation-duration: 0.6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes throbby-star-1 {
+	0% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #555 70%, #555 100%);
+	}
+	16.66% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+	33.33% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+	50% {
+		background: linear-gradient(to top, #555 0%, #555 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+	66.66% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+	83.33% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+	100% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+}
+
+@keyframes throbby-star-2 {
+	0% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+	16.66% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #555 70%, #555 100%);
+	}
+	33.33% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+	50% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+	66.66% {
+		background: linear-gradient(to top, #555 0%, #555 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+	83.33% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+	100% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+}
+
+@keyframes throbby-star-3 {
+	0% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+	16.66% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+	33.33% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #555 70%, #555 100%);
+	}
+	50% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+	66.66% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+	83.33% {
+		background: linear-gradient(to top, #555 0%, #555 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+	100% {
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	}
+}
