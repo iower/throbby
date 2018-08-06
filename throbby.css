@@ -749,3 +749,31 @@
 		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
 	}
 }
+
+.throbby-crescent {
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border-left: 4px solid #888;
+	border-top: 4px solid #888;
+	animation-name: throbby-crescent;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes throbby-crescent {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+}
