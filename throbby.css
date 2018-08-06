@@ -760,8 +760,8 @@
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	border-left: 4px solid #888;
-	border-top: 4px solid #888;
+	border-left: 4px solid #aaa;
+	border-top: 4px solid #aaa;
 	animation-name: throbby-crescent;
 	animation-duration: 0.5s;
 	animation-iteration-count: infinite;
@@ -776,4 +776,30 @@
 		transform: rotate(360deg);
 	}
 }
+
+.throbby-arc {
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid #aaa;
+	border-left-color: transparent;
+	animation-name: throbby-arc;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes throbby-arc {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
