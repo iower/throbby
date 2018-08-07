@@ -1,0 +1,670 @@
+.throbby
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -5px;
+	margin-left: -2px;
+	width: 4px;
+	height: 10px;
+	background-color: #333;
+	animation-name: throbby-2;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+
+.throbby::before
+	position: absolute;
+	left: -8px;
+	top: 0px;
+	display: table;
+	content: '';
+	width: 4px;
+	height: 10px;
+	background-color: #333;
+	animation-name: throbby-1;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+
+.throbby::after
+	position: absolute;
+	right: -8px;
+	top: 0px;
+	display: table;
+	content: '';
+	width: 4px;
+	height: 10px;
+	background-color: #333;
+	animation-name: throbby-3;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+
+@keyframes throbby-1
+	0%
+		transform: scaleY(1);
+	20%
+		transform: scaleY(2);
+	40%
+		transform: scaleY(1);
+	60%
+		transform: scaleY(1);
+	80%
+		transform: scaleY(1);
+	100%
+		transform: scaleY(1);
+
+@keyframes throbby-2
+	0%
+		transform: scaleY(1);
+	20%
+		transform: scaleY(1);
+	40%
+		transform: scaleY(2);
+	60%
+		transform: scaleY(1);
+	80%
+		transform: scaleY(1);
+	100%
+		transform: scaleY(1);
+
+@keyframes throbby-3
+	0%
+		transform: scaleY(1);
+	20%
+		transform: scaleY(1);
+	40%
+		transform: scaleY(1);
+	60%
+		transform: scaleY(2);
+	80%
+		transform: scaleY(1);
+	100%
+		transform: scaleY(1);
+
+.throbby-wheel
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: 20px;
+	height: 20px;
+	background-color: #aaa;
+	border-radius: 50%;
+
+.throbby-wheel::before
+	position: absolute;
+	left: 0px;
+	top: 9px;
+	display: table;
+	content: '';
+	width: 20px;
+	height: 2px;
+	background-color: black;
+	transform: rotate(0deg);
+	transition: all;
+	animation-name: throbby-wheel;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+
+@keyframes throbby-wheel
+	0%
+		transform: rotate(0deg);
+	50%
+		transform: rotate(180deg);
+	100%
+		transform: rotate(360deg);
+
+.throbby-rolling
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -5px;
+	margin-left: -5px;
+	width: 10px;
+	height: 10px;
+	background-color: #000;
+	animation-name: throbby-rolling;
+	animation-duration: 1.2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+@keyframes throbby-rolling
+	0%
+		opacity: 0;
+		transform: translateX(-30px) rotate(0deg);
+	10%
+		opacity: 0;
+	50%
+		opacity: 1;
+		transform: translateX(0px) rotate(180deg);
+	90%
+		opacity: 0;
+	100%
+		opacity: 0;
+		transform: translateX(30px) rotate(360deg);
+
+.throbby-droplet
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -7px;
+	margin-left: -7px;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color: #aaa;
+	animation-name: throbby-droplet;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+
+@keyframes throbby-droplet
+	0%
+		transform: scale(1.5, 1);
+	50%
+		transform: scale(1, 1.5);
+	100%
+		transform: scale(1.5, 1);
+
+.throbby-eccentric
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: 20px;
+	height: 20px;
+	background-color: #aaa;
+	border-radius: 50%;
+	animation-name: throbby-eccentric;
+	animation-duration: 0.7s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+.throbby-eccentric::before
+	position: absolute;
+	display: table;
+	content: '';
+	left: 0px;
+	top: 50%;
+	margin-top: -4px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #555;
+
+@keyframes throbby-eccentric
+	0%
+		transform: rotate(0deg);
+	50%
+		transform: rotate(180deg);
+	100%
+		transform: rotate(360deg);
+
+.throbby-wormhole
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: 20px;
+	height: 20px;
+	background-color: #aaa;
+	border-radius: 50%;
+	animation-name: throbby-wormhole;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+.throbby-wormhole::before
+	position: absolute;
+	display: table;
+	content: '';
+	left: 0px;
+	top: 50%;
+	margin-top: -7px;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: #555;
+
+.throbby-wormhole::after
+	position: absolute;
+	display: table;
+	content: '';
+	left: 0px;
+	top: 50%;
+	margin-top: -8px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #222;
+
+@keyframes throbby-wormhole
+	0%
+		transform: rotate(0deg);
+	50%
+		transform: rotate(180deg);
+	100%
+		transform: rotate(360deg);
+
+.throbby-triangle
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 0;
+	height: 0;
+	animation-name: throbby-triangle;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+.throbby-triangle::after
+	display: table;
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0px;
+	height: 0px;
+	margin-left: -10px;
+	margin-top: -11px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 17px solid #999;
+
+@keyframes throbby-triangle
+	0%
+		transform: rotate(0deg);
+	50%
+		transform: rotate(180deg);
+	100%
+		transform: rotate(360deg);
+
+.throbby-dots
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -5px;
+	margin-left: -5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #bbb;
+	animation-name: throbby-dots2;
+	animation-duration: 0.6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+.throbby-dots::before
+	display: table;
+	content: '';
+	position: absolute;
+	left: -15px;
+	top: 0px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #bbb;
+	animation-name: throbby-dots1;
+	animation-duration: 0.6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+.throbby-dots::after
+	display: table;
+	content: '';
+	position: absolute;
+	right: -15px;
+	top: 0;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #bbb;
+	animation-name: throbby-dots3;
+	animation-duration: 0.6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+	transition: all;
+
+@keyframes throbby-dots1
+	0%
+		background-color: #bbb;
+	30%
+		background-color: #888;
+	40%
+		background-color: #888;
+	60%
+		background-color: #bbb;
+
+@keyframes throbby-dots2
+	20%
+		background-color: #bbb;
+	40%
+		background-color: #888;
+	60%
+		background-color: #888;
+	80%
+		background-color: #bbb;
+
+@keyframes throbby-dots3
+	40%
+		background-color: #bbb;
+	60%
+		background-color: #888;
+	80%
+		background-color: #888;
+	100%
+		background-color: #bbb;
+
+.throbby-ring
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 4px solid #bbb;
+	animation-name: throbby-ring;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+.throbby-ring::before
+	display: table;
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: -4px;
+	margin-left: -2px;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #555;
+
+@keyframes throbby-ring
+	0%
+		transform: rotate(0deg);
+	100%
+		transform: rotate(360deg);
+
+.throbby-4-dots
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: 20px;
+	height: 20px;
+	border: 5px dotted #999;
+	border-radius: 50%;
+	animation-name: throbby-n-dots;
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+.throbby-8-dots
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: 20px;
+	height: 20px;
+	border: 3px dotted #999;
+	border-radius: 50%;
+	animation-name: throbby-n-dots;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+@keyframes throbby-n-dots
+	0%
+		transform: rotate(0deg);
+	100%
+		transform: rotate(360deg);
+
+.throbby-gear
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: 20px;
+	height: 20px;
+	border: 6px dashed #999;
+	border-radius: 50%;
+	animation-name: throbby-gear;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+.throbby-gear::after
+	box-sizing: border-box;
+	display: table;
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -12px;
+	margin-top: -12px;
+	width: 24px;
+	height: 24px;
+	border: 2px dashed #999;
+	border-radius: 50%;
+
+@keyframes throbby-gear
+	0%
+		transform: rotate(0deg);
+	100%
+		transform: rotate(360deg);
+
+.throbby-clock
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #999;
+	border-radius: 50%;
+
+.throbby-clock::before
+	box-sizing: border-box;
+	display: table;
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -1px;
+	margin-top: -7px;
+	width: 2px;
+	height: 14px;
+	background-color: #999;
+	background-clip: content-box;
+	padding-bottom: 7px;
+	animation-name: throbby-clock;
+	animation-duration: 0.4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+.throbby-clock::after
+	box-sizing: border-box;
+	display: table;
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -1.5px;
+	margin-top: -6px;
+	width: 3px;
+	height: 12px;
+	background-color: #999;
+	background-clip: content-box;
+	padding-bottom: 6px;
+	animation-name: throbby-clock;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+@keyframes throbby-clock
+	0%
+		transform: rotate(0deg);
+	100%
+		transform: rotate(360deg);
+
+.throbby-star
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -1px;
+	width: 2px;
+	height: 20px;
+	background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	animation-name: throbby-star-1;
+	animation-duration: 0.6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+.throbby-star::before
+	display: table;
+	content: '';
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -1px;
+	width: 2px;
+	height: 20px;
+	background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	transform: rotate(60deg);
+	animation-name: throbby-star-2;
+	animation-duration: 0.6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+.throbby-star::after
+	display: table;
+	content: '';
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -1px;
+	width: 2px;
+	height: 20px;
+	background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	transform: rotate(120deg);
+	animation-name: throbby-star-3;
+	animation-duration: 0.6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+@keyframes throbby-star-1
+	0%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #555 70%, #555 100%);
+	16.66%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	33.33%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	50%
+		background: linear-gradient(to top, #555 0%, #555 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	66.66%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	83.33%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	100%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+
+@keyframes throbby-star-2
+	0%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	16.66%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #555 70%, #555 100%);
+	33.33%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	50%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	66.66%
+		background: linear-gradient(to top, #555 0%, #555 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	83.33%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	100%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+
+@keyframes throbby-star-3
+	0%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	16.66%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	33.33%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #555 70%, #555 100%);
+	50%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	66.66%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	83.33%
+		background: linear-gradient(to top, #555 0%, #555 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+	100%
+		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%);
+
+.throbby-crescent
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border-left: 4px solid #aaa;
+	border-top: 4px solid #aaa;
+	animation-name: throbby-crescent;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+@keyframes throbby-crescent
+	0%
+		transform: rotate(0deg);
+	100%
+		transform: rotate(360deg);
+
+.throbby-arc
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid #aaa;
+	border-left-color: transparent;
+	animation-name: throbby-arc;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+@keyframes throbby-arc
+	0%
+		transform: rotate(0deg);
+	100%
+		transform: rotate(360deg);
