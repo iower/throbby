@@ -18,7 +18,7 @@ gulp.task('browserSyncTask', function() {
 
 gulp.task('sassToCss', function() {
 	return gulp.src('*.sass')
-		.pipe(sass({outputStule: 'expand'}).on('error', notify.onError()))
+		.pipe(sass({outputStule: 'expanded', indentType: 'tab', indentWidth: 1}).on('error', notify.onError()))
 		//.pipe(rename({suffix: '.min', prefix: ''}))
 		.pipe(gulp.dest('./'))
 		.pipe(browserSync.stream())
