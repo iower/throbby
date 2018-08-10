@@ -13,15 +13,24 @@
 		+pseudo-element
 		@content
 
-.throbby
-	test: test
+=central-element($width, $height)
 	position: absolute
 	left: 50%
 	top: 50%
-	margin-top: -5px
-	margin-left: -2px
-	width: 4px
-	height: 10px
+	margin-left: - $width / 2
+	margin-top: - $height / 2
+	width: $width
+	height: $height
+
+
+*[class*="throbby"]
+	&,
+	&::before,
+	&::after
+		box-sizing: border-box
+
+.throbby
+	+central-element(4px, 10px)
 	background-color: #333
 	animation-name: throbby-2
 	animation-duration: 1s
@@ -93,13 +102,7 @@
 		transform: scaleY(1)
 
 .throbby-wheel
-	position: absolute
-	left: 50%
-	top: 50%
-	margin-top: -10px
-	margin-left: -10px
-	width: 20px
-	height: 20px
+	+central-element(20px, 20px)
 	background-color: #aaa
 	border-radius: 50%
 	
@@ -118,13 +121,7 @@
 
 
 .throbby-rolling
-	position: absolute
-	left: 50%
-	top: 50%
-	margin-top: -5px
-	margin-left: -5px
-	width: 10px
-	height: 10px
+	+central-element(10px, 10px)
 	background-color: #000
 	animation-name: throbby-rolling
 	animation-duration: 1.2s
@@ -147,13 +144,7 @@
 		transform: translateX(30px) rotate(360deg)
 
 .throbby-droplet
-	position: absolute
-	left: 50%
-	top: 50%
-	margin-top: -7px
-	margin-left: -7px
-	width: 14px
-	height: 14px
+	+central-element(14px, 14px)
 	border-radius: 50%
 	background-color: #aaa
 	animation-name: throbby-droplet
@@ -170,13 +161,7 @@
 		transform: scale(1.5, 1)
 
 .throbby-eccentric
-	position: absolute
-	left: 50%
-	top: 50%
-	margin-top: -10px
-	margin-left: -10px
-	width: 20px
-	height: 20px
+	+central-element(20px, 20px)
 	background-color: #aaa
 	border-radius: 50%
 	animation-name: rotation
@@ -195,13 +180,7 @@
 
 
 .throbby-wormhole
-	position: absolute
-	left: 50%
-	top: 50%
-	margin-top: -10px
-	margin-left: -10px
-	width: 20px
-	height: 20px
+	+central-element(20px, 20px)
 	background-color: #aaa
 	border-radius: 50%
 	animation-name: rotation
@@ -229,11 +208,7 @@
 
 
 .throbby-triangle
-	position: absolute
-	left: 50%
-	top: 50%
-	width: 0
-	height: 0
+	+central-element(0px, 0px)
 	animation-name: rotation
 	animation-duration: 1s
 	animation-iteration-count: infinite
@@ -252,13 +227,7 @@
 
 
 .throbby-dots
-	position: absolute
-	left: 50%
-	top: 50%
-	margin-top: -5px
-	margin-left: -5px
-	width: 10px
-	height: 10px
+	+central-element(10px, 10px)
 	border-radius: 50%
 	background-color: #bbb
 	animation-name: throbby-dots2
@@ -323,14 +292,7 @@
 
 
 .throbby-ring
-	box-sizing: border-box
-	position: absolute
-	left: 50%
-	top: 50%
-	margin-top: -10px
-	margin-left: -10px
-	width: 20px
-	height: 20px
+	+central-element(20px, 20px)
 	border-radius: 50%
 	border: 4px solid #bbb
 	animation-name: rotation
@@ -349,14 +311,7 @@
 
 
 .throbby-4-dots
-	box-sizing: border-box
-	position: absolute
-	left: 50%
-	top: 50%
-	margin-top: -10px
-	margin-left: -10px
-	width: 20px
-	height: 20px
+	+central-element(20px, 20px)
 	border: 5px dotted #999
 	border-radius: 50%
 	animation-name: rotation
@@ -366,14 +321,7 @@
 
 
 .throbby-8-dots
-	box-sizing: border-box
-	position: absolute
-	left: 50%
-	top: 50%
-	margin-top: -10px
-	margin-left: -10px
-	width: 20px
-	height: 20px
+	+central-element(20px, 20px)
 	border: 3px dotted #999
 	border-radius: 50%
 	animation-name: rotation
@@ -383,14 +331,7 @@
 
 
 .throbby-gear
-	box-sizing: border-box
-	position: absolute
-	left: 50%
-	top: 50%
-	margin-top: -10px
-	margin-left: -10px
-	width: 20px
-	height: 20px
+	+central-element(20px, 20px)
 	border: 6px dashed #999
 	border-radius: 50%
 	animation-name: rotation
@@ -399,7 +340,6 @@
 	animation-timing-function: linear
 	
 	+after
-		box-sizing: border-box
 		left: 50%
 		top: 50%
 		margin-left: -12px
@@ -411,19 +351,11 @@
 
 
 .throbby-clock
-	box-sizing: border-box
-	position: absolute
-	left: 50%
-	top: 50%
-	margin-top: -10px
-	margin-left: -10px
-	width: 20px
-	height: 20px
+	+central-element(20px, 20px)
 	border: 2px solid #999
 	border-radius: 50%
 	
 	+before
-		box-sizing: border-box
 		left: 50%
 		top: 50%
 		margin-left: -1px
@@ -439,7 +371,6 @@
 		animation-timing-function: linear
 	
 	+after
-		box-sizing: border-box
 		left: 50%
 		top: 50%
 		margin-left: -1.5px
@@ -456,14 +387,7 @@
 
 
 .throbby-star
-	box-sizing: border-box
-	position: absolute
-	left: 50%
-	top: 50%
-	margin-top: -10px
-	margin-left: -1px
-	width: 2px
-	height: 20px
+	+central-element(2px, 20px)
 	background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%)
 	animation-name: throbby-star-1
 	animation-duration: 0.6s
@@ -471,7 +395,6 @@
 	animation-timing-function: linear
 	
 	+before
-		box-sizing: border-box
 		left: 50%
 		top: 50%
 		margin-top: -10px
@@ -486,7 +409,6 @@
 		animation-timing-function: linear
 	
 	+after
-		box-sizing: border-box
 		left: 50%
 		top: 50%
 		margin-top: -10px
@@ -550,14 +472,7 @@
 
 
 .throbby-crescent
-	box-sizing: border-box
-	position: absolute
-	left: 50%
-	top: 50%
-	margin-top: -10px
-	margin-left: -10px
-	width: 20px
-	height: 20px
+	+central-element(20px, 20px)
 	border-radius: 50%
 	border-left: 4px solid #aaa
 	border-top: 4px solid #aaa
@@ -568,14 +483,7 @@
 
 
 .throbby-arc
-	box-sizing: border-box
-	position: absolute
-	left: 50%
-	top: 50%
-	margin-top: -10px
-	margin-left: -10px
-	width: 20px
-	height: 20px
+	+central-element(20px, 20px)
 	border-radius: 50%
 	border: 2px solid #aaa
 	border-left-color: transparent
