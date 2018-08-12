@@ -32,10 +32,7 @@
 .throbby
 	+central-element(4px, 10px)
 	background-color: #333
-	animation-name: throbby-2
-	animation-duration: 1s
-	animation-iteration-count: infinite
-	animation-timing-function: ease
+	animation: 1s ease infinite throbby-2
 	
 	+before
 		left: -8px
@@ -43,10 +40,7 @@
 		width: 4px
 		height: 10px
 		background-color: #333
-		animation-name: throbby-1
-		animation-duration: 1s
-		animation-iteration-count: infinite
-		animation-timing-function: ease
+		animation: 1s ease infinite throbby-1
 	
 	+after
 		right: -8px
@@ -54,10 +48,7 @@
 		width: 4px
 		height: 10px
 		background-color: #333
-		animation-name: throbby-3
-		animation-duration: 1s
-		animation-iteration-count: infinite
-		animation-timing-function: ease
+		animation: 1s ease infinite throbby-3
 
 @keyframes throbby-1
 	0%
@@ -112,21 +103,13 @@
 		width: 20px
 		height: 2px
 		background-color: black
-		transform: rotate(0deg)
-		transition: all
-		animation-name: rotation
-		animation-duration: 1s
-		animation-iteration-count: infinite
-		animation-timing-function: ease
+		animation: 1s ease infinite rotation
 
 
 .throbby-rolling
 	+central-element(10px, 10px)
 	background-color: #000
-	animation-name: throbby-rolling
-	animation-duration: 1.2s
-	animation-iteration-count: infinite
-	animation-timing-function: linear
+	animation: 1.2s linear infinite throbby-rolling
 
 @keyframes throbby-rolling
 	0%
@@ -143,14 +126,13 @@
 		opacity: 0
 		transform: translateX(30px) rotate(360deg)
 
+
 .throbby-droplet
 	+central-element(14px, 14px)
 	border-radius: 50%
 	background-color: #aaa
-	animation-name: throbby-droplet
-	animation-duration: 0.5s
-	animation-iteration-count: infinite
-	animation-timing-function: ease
+	animation: 0.5s ease infinite throbby-droplet
+
 
 @keyframes throbby-droplet
 	0%
@@ -164,10 +146,7 @@
 	+central-element(20px, 20px)
 	background-color: #aaa
 	border-radius: 50%
-	animation-name: rotation
-	animation-duration: 0.7s
-	animation-iteration-count: infinite
-	animation-timing-function: linear
+	animation: 0.7s linear infinite rotation
 	
 	+before
 		left: 0px
@@ -183,10 +162,7 @@
 	+central-element(20px, 20px)
 	background-color: #aaa
 	border-radius: 50%
-	animation-name: rotation
-	animation-duration: 0.5s
-	animation-iteration-count: infinite
-	animation-timing-function: linear
+	animation: 0.5s linear infinite rotation
 	
 	+before
 		left: 0px
@@ -209,10 +185,7 @@
 
 .throbby-triangle
 	+central-element(0px, 0px)
-	animation-name: rotation
-	animation-duration: 1s
-	animation-iteration-count: infinite
-	animation-timing-function: linear
+	animation: 1s linear infinite rotation
 	
 	+after
 		left: 0
@@ -230,10 +203,7 @@
 	+central-element(10px, 10px)
 	border-radius: 50%
 	background-color: #bbb
-	animation-name: throbby-dots2
-	animation-duration: 0.6s
-	animation-iteration-count: infinite
-	animation-timing-function: linear
+	animation: 0.6s linear infinite throbby-dots2
 	
 	+before
 		left: -15px
@@ -242,10 +212,7 @@
 		height: 10px
 		border-radius: 50%
 		background-color: #bbb
-		animation-name: throbby-dots1
-		animation-duration: 0.6s
-		animation-iteration-count: infinite
-		animation-timing-function: linear
+		animation: 0.6s linear infinite throbby-dots1
 	
 	+after
 		right: -15px
@@ -254,11 +221,7 @@
 		height: 10px
 		border-radius: 50%
 		background-color: #bbb
-		animation-name: throbby-dots3
-		animation-duration: 0.6s
-		animation-iteration-count: infinite
-		animation-timing-function: ease
-		transition: all
+		animation: 0.6s linear infinite throbby-dots3
 
 @keyframes throbby-dots1
 	0%
@@ -295,10 +258,7 @@
 	+central-element(20px, 20px)
 	border-radius: 50%
 	border: 4px solid #bbb
-	animation-name: rotation
-	animation-duration: 0.5s
-	animation-iteration-count: infinite
-	animation-timing-function: linear
+	animation: 0.5s linear infinite rotation
 	
 	+before
 		left: 50%
@@ -314,30 +274,21 @@
 	+central-element(20px, 20px)
 	border: 5px dotted #999
 	border-radius: 50%
-	animation-name: rotation
-	animation-duration: 0.8s
-	animation-iteration-count: infinite
-	animation-timing-function: linear
+	animation: 0.8s linear infinite rotation
 
 
 .throbby-8-dots
 	+central-element(20px, 20px)
 	border: 3px dotted #999
 	border-radius: 50%
-	animation-name: rotation
-	animation-duration: 1s
-	animation-iteration-count: infinite
-	animation-timing-function: linear
+	animation: 1s linear infinite rotation
 
 
 .throbby-gear
 	+central-element(20px, 20px)
 	border: 6px dashed #999
 	border-radius: 50%
-	animation-name: rotation
-	animation-duration: 1s
-	animation-iteration-count: infinite
-	animation-timing-function: linear
+	animation: 1s linear infinite rotation
 	
 	+after
 		left: 50%
@@ -365,10 +316,7 @@
 		background-color: #999
 		background-clip: content-box
 		padding-bottom: 7px
-		animation-name: rotation
-		animation-duration: 0.4s
-		animation-iteration-count: infinite
-		animation-timing-function: linear
+		animation: 0.4s linear infinite rotation
 	
 	+after
 		left: 50%
@@ -380,19 +328,13 @@
 		background-color: #999
 		background-clip: content-box
 		padding-bottom: 6px
-		animation-name: rotation
-		animation-duration: 6s
-		animation-iteration-count: infinite
-		animation-timing-function: linear
+		animation: 6s linear infinite rotation
 
 
 .throbby-star
 	+central-element(2px, 20px)
 	background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%)
-	animation-name: throbby-star-1
-	animation-duration: 0.6s
-	animation-iteration-count: infinite
-	animation-timing-function: linear
+	animation: 0.6s linear infinite throbby-star-1
 	
 	+before
 		left: 50%
@@ -403,10 +345,7 @@
 		height: 20px
 		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%)
 		transform: rotate(60deg)
-		animation-name: throbby-star-2
-		animation-duration: 0.6s
-		animation-iteration-count: infinite
-		animation-timing-function: linear
+		animation: 0.6s linear infinite throbby-star-2
 	
 	+after
 		left: 50%
@@ -417,10 +356,7 @@
 		height: 20px
 		background: linear-gradient(to top, #999 0%, #999 30%, transparent 30%, transparent 70%, #999 70%, #999 100%)
 		transform: rotate(120deg)
-		animation-name: throbby-star-3
-		animation-duration: 0.6s
-		animation-iteration-count: infinite
-		animation-timing-function: linear
+		animation: 0.6s linear infinite throbby-star-3
 
 @keyframes throbby-star-1
 	0%
@@ -476,10 +412,7 @@
 	border-radius: 50%
 	border-left: 4px solid #aaa
 	border-top: 4px solid #aaa
-	animation-name: rotation
-	animation-duration: 0.5s
-	animation-iteration-count: infinite
-	animation-timing-function: linear
+	animation: 0.5s linear infinite rotation
 
 
 .throbby-arc
@@ -487,10 +420,7 @@
 	border-radius: 50%
 	border: 2px solid #aaa
 	border-left-color: transparent
-	animation-name: rotation
-	animation-duration: 0.5s
-	animation-iteration-count: infinite
-	animation-timing-function: linear
+	animation: 0.5s linear infinite rotation
 
 @keyframes rotation
 	0%
