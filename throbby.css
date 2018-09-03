@@ -308,6 +308,41 @@
 		border-radius: 50%;
 		background-color: #555; }
 
+.throbby-2-dots {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: 0px;
+	margin-top: 0px;
+	width: 0px;
+	height: 0px;
+	animation: 0.5s linear infinite rotation;
+	background-color: #444; }
+	.throbby-2-dots::before {
+		position: absolute;
+		display: table;
+		content: '';
+		left: 0px;
+		top: 0px;
+		width: 6px;
+		height: 6px;
+		margin-top: -3px;
+		margin-left: -10px;
+		background-color: #999;
+		border-radius: 50%; }
+	.throbby-2-dots::after {
+		position: absolute;
+		display: table;
+		content: '';
+		left: 0px;
+		top: 0px;
+		width: 6px;
+		height: 6px;
+		margin-top: -3px;
+		margin-left: 4px;
+		background-color: #999;
+		border-radius: 50%; }
+
 .throbby-4-dots {
 	position: absolute;
 	left: 50%;
@@ -511,3 +546,33 @@
 		transform: rotate(0deg); }
 	100% {
 		transform: rotate(360deg); } }
+
+.throbby-reposition {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -5px;
+	margin-top: -5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #aaa;
+	animation: 0.5s ease infinite throbby-reposition both; }
+
+@keyframes throbby-reposition {
+	0% {
+		transform: translateX(-100%) scale(1, 1); }
+	10% {
+		transform: translateX(-100%) scale(1, 1); }
+	30% {
+		transform: scale(2, 0.5); }
+	40% {
+		transform: translateX(100%) scale(1, 1); }
+	60% {
+		transform: translateX(100%) scale(1, 1); }
+	70% {
+		transform: scale(2, 0.5); }
+	90% {
+		transform: translateX(-100%) scale(1, 1); }
+	100% {
+		transform: translateX(-100%) scale(1, 1); } }

@@ -1,3 +1,5 @@
+$standart_throbber_size: 20px
+
 =pseudo-element
 	position: absolute
 	display: table
@@ -270,6 +272,34 @@
 		background-color: #555
 
 
+.throbby-2-dots
+	+central-element(0px, 0px)
+	animation: 0.5s linear infinite rotation
+	background-color: #444
+	
+	$dot_size: 6px
+	
+	+before
+		left: 0px
+		top: 0px
+		width: $dot_size
+		height: $dot_size
+		margin-top: -$dot_size / 2
+		margin-left: -($standart_throbber_size / 2)
+		background-color: #999
+		border-radius: 50%
+	
+	+after
+		left: 0px
+		top: 0px
+		width: $dot_size
+		height: $dot_size
+		margin-top: -$dot_size / 2
+		margin-left: $standart_throbber_size / 2 - $dot_size
+		background-color: #999
+		border-radius: 50%
+
+
 .throbby-4-dots
 	+central-element(20px, 20px)
 	border: 5px dotted #999
@@ -428,4 +458,26 @@
 	100%
 		transform: rotate(360deg)
 
+.throbby-reposition
+	+central-element(10px, 10px)
+	border-radius: 50%
+	background-color: #aaa
+	animation: 0.5s ease infinite throbby-reposition both
 
+@keyframes throbby-reposition
+	0%
+		transform: translateX(-100%) scale(1, 1)
+	10%
+		transform: translateX(-100%) scale(1, 1)
+	30%
+		transform: scale(2, 0.5)
+	40%
+		transform: translateX(100%) scale(1, 1)
+	60%
+		transform: translateX(100%) scale(1, 1)
+	70%
+		transform: scale(2, 0.5)
+	90%
+		transform: translateX(-100%) scale(1, 1)
+	100%
+		transform: translateX(-100%) scale(1, 1)
