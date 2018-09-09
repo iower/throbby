@@ -481,3 +481,49 @@ $standart_throbber_size: 20px
 		transform: translateX(-100%) scale(1, 1)
 	100%
 		transform: translateX(-100%) scale(1, 1)
+
+.throbby-hypno
+	+central-element(20px, 20px)
+	border-radius: 50%
+	border: 2px solid #999
+	background-color: #fff
+	
+	+before
+		left: 50%
+		top: 50%
+		border-radius: 50%
+		background-color: #bbb
+		animation: 0.7s linear infinite throbby-hypno-1
+	
+	+after
+		left: 50%
+		top: 50%
+		border-radius: 50%
+		background-color: #ddd
+		animation: 0.7s linear infinite throbby-hypno-2
+
+@keyframes throbby-hypno-1
+	0%
+		width: 0
+		height: 0
+		margin-left: 0
+		margin-top: 0
+	50%,
+	100%
+		width: 18px
+		height: 18px
+		margin-left: -9px
+		margin-top: -9px
+
+@keyframes throbby-hypno-2
+	0%,
+	50%
+		width: 0
+		height: 0
+		margin-left: 0
+		margin-top: 0
+	100%
+		width: 18px
+		height: 18px
+		margin-left: -9px
+		margin-top: -9px
