@@ -632,3 +632,44 @@
 		height: 18px;
 		margin-left: -9px;
 		margin-top: -9px; } }
+
+.throbby-hourglass {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -6px;
+	margin-top: -10px;
+	width: 12px;
+	height: 20px;
+	border: 1px solid #999;
+	border-radius: 2px;
+	animation: 0.5s linear infinite throbby-hourglass; }
+	.throbby-hourglass::before {
+		position: absolute;
+		display: table;
+		content: '';
+		left: 0;
+		top: 1px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 9px 5px 0 5px;
+		border-color: #aaa transparent transparent transparent; }
+	.throbby-hourglass::after {
+		position: absolute;
+		display: table;
+		content: '';
+		left: 0;
+		top: 8px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 5px 9px 5px;
+		border-color: transparent transparent #aaa transparent; }
+
+@keyframes throbby-hourglass {
+	0% {
+		transform: rotate(0deg); }
+	33%,
+	100% {
+		transform: rotate(180deg); } }
