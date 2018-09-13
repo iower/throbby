@@ -673,3 +673,31 @@
 	33%,
 	100% {
 		transform: rotate(180deg); } }
+
+.throbby-progressbar {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -15px;
+	margin-top: -4px;
+	width: 30px;
+	height: 8px;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	overflow: hidden; }
+	.throbby-progressbar::before {
+		position: absolute;
+		display: table;
+		content: '';
+		left: -13px;
+		top: 1px;
+		width: 13px;
+		height: 4px;
+		background: linear-gradient(to right, #aaa, #aaa 25%, transparent 25%, transparent 37.5%, #aaa 37.5%, #aaa 62.5%, transparent 62.5%, transparent 75%, #aaa 75%, #aaa);
+		animation: 0.6s steps(20) infinite throbby-progressbar; }
+
+@keyframes throbby-progressbar {
+	0% {
+		left: -13px; }
+	100% {
+		left: 47px; } }
