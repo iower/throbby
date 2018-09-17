@@ -580,3 +580,27 @@ $standart_throbber_size: 20px
 		left: -13px
 	100%
 		left: 47px
+
+.throbby-interference
+	+central-element(30px, 30px)
+	border-radius: 50%
+	overflow: hidden
+	
+	$color: #aaa
+	=circles($position)
+		background: radial-gradient(circle at $position, transparent, transparent 10%, $color 10%, $color 20%, transparent 20%, transparent 30%, $color 30%, $color 40%, transparent 40%, transparent 50%, $color 50%, $color 60%, transparent 60%, transparent 70%, $color 70%, $color 80%, transparent 80%, transparent 90%, $color 90%, $color 100%)
+	
+	+circles(70%)
+	animation: 1s linear infinite throbby-interference
+	
+	+before
+		width: 100%
+		height: 100%
+		+circles(30%)
+		animation: 1s linear infinite throbby-interference
+
+@keyframes throbby-interference
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)
